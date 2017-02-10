@@ -1,0 +1,29 @@
+package fibonacci;
+
+import javax.swing.JOptionPane;
+
+/**
+ * @author Laura Luis 
+ * Codigo: 614141004
+ * Profesor: Alejandro Cardenas
+ * Materia: Simulación
+ */
+public class Fibonacci {
+
+    public static void main(String[] args) {
+        String n = JOptionPane.showInputDialog("Ingrese un número");
+        int N = Integer.parseInt(n);
+
+        for (int i = 1; i <= N; i++) {
+            JOptionPane.showMessageDialog(null,"N = "+ i + " : " + fib(i));
+        }
+    }
+
+    public static long fib(int n) {
+        if (n <= 1) {
+            return n;
+        } else {
+            return fib(n - 1) + fib(n - 2);
+        }
+    }
+}
